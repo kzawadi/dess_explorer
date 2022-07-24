@@ -8,7 +8,38 @@ environment:
   flutter: 3.0.4
 
 dependencies:
+  at_app_flutter: ^5.0.0+1
+  at_client_mobile: ^3.1.17
+  at_contacts_flutter: ^4.0.5
+  at_contacts_group_flutter: ^4.0.6
+  at_server_status: ^1.0.3
+  at_sync_ui_flutter: ^1.0.4
+  at_utils: ^3.0.10
+  audioplayers: ^1.0.1
+  auto_route: ^4.0.1
+  auto_size_text: ^3.0.0
+  dartz: ^0.10.1
+  flex_color_scheme: ^5.0.1
+  freezed_annotation: ^2.0.3
+  get_it: ^7.2.0
   bloc: ^8.0.3
+  injectable: ^1.5.3
+  package_info_plus: ^1.4.2
+  path_provider: ^2.0.5
+  flutter_dotenv: ^5.0.2
+
+
+dependency_overrides:
+  file_saver:
+    git:
+      url: https://github.com/incrediblezayed/file_saver.git
+      ref: main
+  permission_handler: ^10.0.0
+
+
+
+
+
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
@@ -22,7 +53,16 @@ dev_dependencies:
     sdk: flutter
   mocktail: ^0.3.0
   very_good_analysis: ^3.0.1
+  auto_route_generator: ^4.0.0
+  build_runner: ^2.1.11
+  freezed: ^2.0.3+1
+  injectable_generator: ^1.5.3
+  json_serializable: ^6.1.4
 
 flutter:
   uses-material-design: true
   generate: true
+
+  assets:
+    - .env
+    - assets/images/

@@ -3,6 +3,12 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  at_file_saver
+  audioplayers_windows
+  file_saver
+  file_selector_windows
+  permission_handler_windows
+  url_launcher_windows
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

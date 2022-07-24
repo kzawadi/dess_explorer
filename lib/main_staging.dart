@@ -5,9 +5,9 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:dess_explorer/app/app.dart';
+import 'package:dess_explorer/app.dart';
 import 'package:dess_explorer/bootstrap.dart';
 
 void main() {
-  bootstrap(() => const App());
+  bootstrap(DessApp.new);
 }

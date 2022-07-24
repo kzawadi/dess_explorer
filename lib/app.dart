@@ -3,8 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dess_explorer/application/on_boarding/bloc/on_boarding_bloc.dart';
 import 'package:dess_explorer/injections.dart';
 import 'package:dess_explorer/l10n/l10n.dart';
+import 'package:dess_explorer/presentation/components/theme.dart';
 import 'package:dess_explorer/presentation/routes/router.gr.dart' as app_router;
 import 'package:dess_explorer/presentation/routes/routes_observer.dart';
+import 'package:dess_explorer/presentation/settings/settings.utils.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,29 +36,23 @@ class DessApp extends StatelessWidget {
             create: (context) => getIt<OnBoardingBloc>(),
           ),
         ],
-        child: AnimatedTheme(
-          curve: Curves.easeInOut,
-          duration: const Duration(milliseconds: 300),
-          data: FlexThemeData.light(
-            scheme: FlexScheme.amber,
-            visualDensity: VisualDensity.standard,
-            useMaterial3: true,
+        child: MaterialApp.router(
+          title: 'Dess Explorer',
+          debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          routerDelegate: AutoRouterDelegate(
+            _appRouter, //todo
+            navigatorObservers: () => [PrivateFitRouteObserver()],
           ),
-          child: MaterialApp.router(
-            title: 'Dess Explorer',
-            debugShowCheckedModeBanner: false,
-            localizationsDelegates: const [
-              AppLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-            ],
-            supportedLocales: AppLocalizations.supportedLocales,
-            routerDelegate: AutoRouterDelegate(
-              _appRouter,
-              navigatorObservers: () => [PrivateFitRouteObserver()],
-            ),
-            routeInformationParser: _appRouter.defaultRouteParser(),
-            builder: (context, router) => router!,
-          ),
+          routeInformationParser: _appRouter.defaultRouteParser(),
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          themeMode: getThemeMode('system'),
+          builder: (context, router) => router!,
         ),
       ),
     );

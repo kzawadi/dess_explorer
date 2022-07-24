@@ -8,6 +8,7 @@ environment:
   flutter: 3.0.4
 
 dependencies:
+  animations: ^2.0.3
   at_app_flutter: ^5.0.0+1
   at_client_mobile: ^3.1.17
   at_contacts_flutter: ^4.0.5
@@ -18,16 +19,21 @@ dependencies:
   audioplayers: ^1.0.1
   auto_route: ^4.0.1
   auto_size_text: ^3.0.0
+  bitsdojo_window: ^0.1.2
+  bloc: ^8.0.3
   dartz: ^0.10.1
   flex_color_scheme: ^5.0.1
+  flutter_acrylic: ^1.0.0+2
+  flutter_dotenv: ^5.0.2
+  flutter_hooks: ^0.18.5+1
   freezed_annotation: ^2.0.3
   get_it: ^7.2.0
-  bloc: ^8.0.3
+  google_fonts: ^3.0.1
   injectable: ^1.5.3
+  material_design_icons_flutter: ^5.0.6996
   package_info_plus: ^1.4.2
   path_provider: ^2.0.5
-  flutter_dotenv: ^5.0.2
-
+  window_manager: ^0.2.5
 
 dependency_overrides:
   file_saver:
@@ -35,10 +41,6 @@ dependency_overrides:
       url: https://github.com/incrediblezayed/file_saver.git
       ref: main
   permission_handler: ^10.0.0
-
-
-
-
 
   flutter:
     sdk: flutter
@@ -48,16 +50,16 @@ dependency_overrides:
   intl: ^0.17.0
 
 dev_dependencies:
+  auto_route_generator: ^4.0.0
   bloc_test: ^9.0.3
+  build_runner: ^2.1.11
   flutter_test:
     sdk: flutter
-  mocktail: ^0.3.0
-  very_good_analysis: ^3.0.1
-  auto_route_generator: ^4.0.0
-  build_runner: ^2.1.11
   freezed: ^2.0.3+1
   injectable_generator: ^1.5.3
   json_serializable: ^6.1.4
+  mocktail: ^0.3.0
+  very_good_analysis: ^3.0.1
 
 flutter:
   uses-material-design: true

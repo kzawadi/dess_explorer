@@ -77,6 +77,7 @@ class OboardInfo extends StatelessWidget {
           ),
           fit: BoxFit.fitHeight,
         ),
+        color: Colors.amber,
       ),
     );
   }

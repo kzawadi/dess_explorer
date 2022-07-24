@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:dess_explorer/presentation/home/app_shell.dart';
 import 'package:dess_explorer/presentation/home/home_page.dart';
 import 'package:dess_explorer/presentation/on_boarding/on_boarding_page.dart';
 import 'package:injectable/injectable.dart';
@@ -16,8 +17,9 @@ other stuff. AutoRoute does all that for you and much more.
 @singleton
 @CupertinoAutoRouter(
   routes: <AutoRoute>[
-    AutoRoute<dynamic>(page: OnBoardingPage, initial: true),
+    AutoRoute<dynamic>(page: OnBoardingPage),
     AutoRoute<dynamic>(page: HomePage),
+    AutoRoute<dynamic>(page: AppShell, initial: true),
   ],
 )
 class $Router {}

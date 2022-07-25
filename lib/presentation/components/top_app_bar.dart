@@ -1,13 +1,15 @@
 import 'dart:io';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:dess_explorer/presentation/components/theme.dart';
 import 'package:dess_explorer/presentation/components/typography.dart';
 import 'package:dess_explorer/presentation/components/windows_boader.dart';
+import 'package:dess_explorer/presentation/routes/router.gr.dart';
 import 'package:dess_explorer/presentation/settings/setting_page.dart';
 import 'package:flutter/material.dart';
 
-/// Sidekick top app bar
+/// Dess Explorer top app bar
 class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// Constructor
   const DessAppBar({Key? key}) : super(key: key);
@@ -63,11 +65,10 @@ class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
         //   onPressed: openSearchModal,
         // ),
         IconButton(
-          icon: const Icon(Icons.settings),
-          iconSize: 20,
-          splashRadius: 15,
-          onPressed: openSettingsScreen,
-        ),
+            icon: const Icon(Icons.settings),
+            iconSize: 20,
+            splashRadius: 15,
+            onPressed: openSettingsScreen),
         const SizedBox(width: 10),
         if (!Platform.isMacOS) const WindowButtons(),
       ],

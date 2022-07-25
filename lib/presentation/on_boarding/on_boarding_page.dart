@@ -1,5 +1,4 @@
 // ignore_for_file: cascade_invocations
-
 import 'package:at_onboarding_flutter/services/size_config.dart';
 import 'package:dess_explorer/application/on_boarding/bloc/on_boarding_bloc.dart';
 import 'package:dess_explorer/injections.dart';

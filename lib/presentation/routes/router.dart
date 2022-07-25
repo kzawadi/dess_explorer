@@ -17,9 +17,9 @@ other stuff. AutoRoute does all that for you and much more.
 @singleton
 @CupertinoAutoRouter(
   routes: <AutoRoute>[
-    AutoRoute<dynamic>(page: OnBoardingPage),
+    AutoRoute<dynamic>(page: OnBoardingPage, initial: true),
     AutoRoute<dynamic>(page: HomePage),
-    AutoRoute<dynamic>(page: AppShell, initial: true),
+    AutoRoute<dynamic>(page: AppShell),
   ],
 )
 class $Router {}

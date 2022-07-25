@@ -1,6 +1,7 @@
 import 'package:at_onboarding_flutter/at_onboarding_flutter.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dess_explorer/application/on_boarding/bloc/on_boarding_bloc.dart';
+import 'package:dess_explorer/presentation/components/top_app_bar.dart';
 import 'package:dess_explorer/presentation/routes/router.gr.dart';
 import 'package:dess_explorer/shared/at_constants.dart';
 import 'package:dess_explorer/shared/images.dart';
@@ -49,7 +50,7 @@ class OnBoardingForm extends StatelessWidget {
             );
           },
           loadSuccess: (state) {
-            AutoRouter.of(context).replace(const HomePageRoute());
+            AutoRouter.of(context).replace(const AppShellRoute());
           },
         );
       },
@@ -69,15 +70,18 @@ class OboardInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-            AllImages.onboarding,
+    return Scaffold(
+      appBar: const DessAppBar(),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              AllImages.onboarding,
+            ),
+            fit: BoxFit.fitHeight,
           ),
-          fit: BoxFit.fitHeight,
+          color: Colors.amber,
         ),
-        color: Colors.amber,
       ),
     );
   }

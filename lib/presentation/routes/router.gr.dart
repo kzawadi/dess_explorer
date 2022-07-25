@@ -39,17 +39,16 @@ class Router extends _i4.RootStackRouter {
 
   @override
   List<_i4.RouteConfig> get routes => [
-        _i4.RouteConfig(OnBoardingPageRoute.name, path: '/on-boarding-page'),
+        _i4.RouteConfig(OnBoardingPageRoute.name, path: '/'),
         _i4.RouteConfig(HomePageRoute.name, path: '/home-page'),
-        _i4.RouteConfig(AppShellRoute.name, path: '/')
+        _i4.RouteConfig(AppShellRoute.name, path: '/app-shell')
       ];
 }
 
 /// generated route for
 /// [_i1.OnBoardingPage]
 class OnBoardingPageRoute extends _i4.PageRouteInfo<void> {
-  const OnBoardingPageRoute()
-      : super(OnBoardingPageRoute.name, path: '/on-boarding-page');
+  const OnBoardingPageRoute() : super(OnBoardingPageRoute.name, path: '/');
 
   static const String name = 'OnBoardingPageRoute';
 }
@@ -65,7 +64,7 @@ class HomePageRoute extends _i4.PageRouteInfo<void> {
 /// generated route for
 /// [_i3.AppShell]
 class AppShellRoute extends _i4.PageRouteInfo<void> {
-  const AppShellRoute() : super(AppShellRoute.name, path: '/');
+  const AppShellRoute() : super(AppShellRoute.name, path: '/app-shell');
 
   static const String name = 'AppShellRoute';
 }

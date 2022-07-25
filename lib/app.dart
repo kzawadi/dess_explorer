@@ -7,7 +7,6 @@ import 'package:dess_explorer/presentation/components/theme.dart';
 import 'package:dess_explorer/presentation/routes/router.gr.dart' as app_router;
 import 'package:dess_explorer/presentation/routes/routes_observer.dart';
 import 'package:dess_explorer/presentation/settings/settings.utils.dart';
-import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,7 +44,7 @@ class DessApp extends StatelessWidget {
           ],
           supportedLocales: AppLocalizations.supportedLocales,
           routerDelegate: AutoRouterDelegate(
-            _appRouter, //todo
+            _appRouter,
             navigatorObservers: () => [PrivateFitRouteObserver()],
           ),
           routeInformationParser: _appRouter.defaultRouteParser(),

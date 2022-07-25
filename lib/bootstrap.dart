@@ -10,6 +10,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:at_utils/at_utils.dart';
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:bloc/bloc.dart';
 import 'package:dess_explorer/injections.dart';
 import 'package:dess_explorer/shared/at_constants.dart';
@@ -18,7 +19,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:injectable/injectable.dart';
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:window_manager/window_manager.dart';
 
 class AppBlocObserver extends BlocObserver {

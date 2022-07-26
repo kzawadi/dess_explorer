@@ -73,14 +73,14 @@ class OboardInfo extends StatelessWidget {
     return Scaffold(
       appBar: const DessAppBar(),
       body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
+        decoration: BoxDecoration(
+          image: const DecorationImage(
             image: AssetImage(
-              AllImages.onboarding,
+              AllImages.atsignlogo,
             ),
             fit: BoxFit.fitHeight,
           ),
-          color: Colors.amber,
+          color: Colors.blueGrey[700],
         ),
       ),
     );

@@ -47,6 +47,9 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
       // Transparency compatibility for windows & linux
       if (!(Platform.isMacOS || Platform.isLinux)) {
         await Window.initialize();
+        await Window.setEffect(
+          effect: WindowEffect.transparent,
+        );
       }
 
       if (!(Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {

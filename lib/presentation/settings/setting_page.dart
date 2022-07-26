@@ -4,22 +4,6 @@ import 'package:dess_explorer/presentation/home/widgets/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-// class SettingPage extends StatelessWidget {
-//   const SettingPage({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return DessScreen(
-//       title: 'Setting',
-//       actions: [],
-//       child: Container(
-//         color: platformBackgroundColor(context),
-//         child: const Text('Settings'),
-//       ),
-//     );
-//   }
-// }
-
 /// TODO: Unify the nav sections information
 /// Nav sections
 enum NavSection {
@@ -50,34 +34,7 @@ class SettingPage extends StatelessWidget {
   final NavSection section;
   @override
   Widget build(BuildContext context) {
-    // final provider = useProvider(settingsProvider.notifier);
-    // final settings = useProvider(settingsProvider);
-
-    // final currentSection = useState(section.index);
-
-    // final controller = usePageController(initialPage: section.index);
-
     final List<String> _sections = ['general', 'FVM', 'Flutter'];
-    // _sections.m
-
-    // void changeSection(int idx) {
-    //   currentSection.value = idx;
-    //   controller.jumpToPage(idx);
-    // }
-
-    // Future<void> handleSave() async {
-    //   final savedMessage =
-    //       context.i18n('modules:settings.settingsHaveBeenSaved');
-    //   final errorMessage =
-    //       context.i18n('modules:settings.couldNotSaveSettings');
-    //   try {
-    //     await provider.save(settings);
-    //     notify(savedMessage);
-    //   } on Exception catch (e) {
-    //     notifyError(errorMessage);
-    //     notifyError(e.toString());
-    //   }
-    // }
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -128,7 +85,7 @@ class SettingPage extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
               // controller: controller,
-              children: [
+              children: const [
                 // SettingsSectionGeneral(settings, handleSave),
                 // FvmSettingsScene(settings, handleSave),
                 // SettingsSectionFlutter(settings, handleSave),

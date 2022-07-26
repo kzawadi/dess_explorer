@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:animations/animations.dart';
+import 'package:dess_explorer/presentation/at_platform/at_platform_page.dart';
 import 'package:dess_explorer/presentation/components/constants.dart';
 import 'package:dess_explorer/presentation/components/theme.dart';
 import 'package:dess_explorer/presentation/components/top_app_bar.dart';
@@ -15,8 +16,10 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 final _scaffoldKey = GlobalKey<ScaffoldState>();
 
 const pages = <Widget>[
+  AtPlatfromPage(),
+
   HomePage(),
-  // FVMScreen(),
+  AtPlatfromPage(),
   // ProjectsScreen(),
   // ReleasesScreen(),
 ];
@@ -78,7 +81,7 @@ class AppShell extends HookWidget {
               ),
               renderNavButton(
                 context,
-                'Projects',
+                'AtPlatform',
                 MdiIcons.folderMultiple,
               ),
               renderNavButton(

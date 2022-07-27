@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:at_utils/at_utils.dart';
 import 'package:dartz/dartz.dart';
-import 'package:dess_explorer/domain/atplatform/i_atplatoform.dart';
+import 'package:dess_explorer/domain/atplatform/i_atplatoform_facade.dart';
 import 'package:dess_explorer/domain/core/at_platform_failures.dart';
+import 'package:dess_explorer/domain/core/value_model.dart';
 import 'package:dess_explorer/infractructure/atplatform/platform_services.dart';
 import 'package:injectable/injectable.dart';
 
@@ -21,6 +24,7 @@ class AtPlatformFacade implements IAtPlatformFacade {
     try {
       final result = await _atClientManager.atClient
           .getAtKeys(regex: regex, sharedBy: sharedBy, sharedWith: sharedWith);
+      _logger.info(result.first.metadata);
       return right(result);
     } on InvalidSyntaxException catch (e, s) {
       _logger.severe('Error while fetching keys', e, s);
@@ -34,8 +38,23 @@ class AtPlatformFacade implements IAtPlatformFacade {
   }
 
   @override
-  Future<Either<AtPlatformFailure, Unit>> getUserName() {
-    // TODO: implement getUserName
-    throw UnimplementedError();
+  Future<Either<AtPlatformFailure, Value>> getValue(AtKey atKey) async {
+    try {
+      final r = await _atClientManager.atClient.get(atKey);
+
+      final parsedJson = jsonDecode(r.value as String);
+      final v = Value.fromJson(parsedJson as Map<String, dynamic>);
+      _logger.info(v);
+      return right(v);
+    } on AtKeyException catch (e) {
+      _logger.severe('The passed key is not correct $e');
+      return left(const AtPlatformFailure.atClientException());
+    } on AtDecryptionException catch (e) {
+      _logger.severe('Failure to decrypt the results $e');
+      return left(const AtPlatformFailure.failToDecrypt());
+    } on AtClientException catch (e) {
+      _logger.severe('cant reach the cloud secondary $e');
+      return left(const AtPlatformFailure.atKeyException());
+    }
   }
 }

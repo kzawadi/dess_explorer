@@ -7,13 +7,14 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import 'application/at_platform/bloc/at_platform_bloc.dart' as _i15;
+import 'application/at_platform/bloc/at_platform_bloc.dart' as _i16;
 import 'application/on_boarding/bloc/on_boarding_bloc.dart' as _i11;
-import 'domain/atplatform/i_atplatoform.dart' as _i4;
+import 'domain/atplatform/i_atplatoform_facade.dart' as _i4;
 import 'domain/atplatform/use_cases/get_all_keys_use_case.dart' as _i13;
+import 'domain/atplatform/use_cases/get_keys_value_use_case.dart' as _i14;
 import 'domain/on_boarding/i_atsign_on_boarding_facade.dart' as _i6;
 import 'domain/on_boarding/use_cases/get_on_boarded_at_sign_use_case.dart'
-    as _i14;
+    as _i15;
 import 'domain/on_boarding/use_cases/load_client_prefs_use_case.dart' as _i8;
 import 'domain/on_boarding/use_cases/on_board_data_when_succesful_use_case.dart'
     as _i10;
@@ -45,9 +46,11 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       get<_i12.OnBoardDataWhenSuccessfulUseCase>()));
   gh.lazySingleton<_i13.GetAllKeysUseCase>(
       () => _i13.GetAllKeysUseCase(get<_i4.IAtPlatformFacade>()));
-  gh.factory<_i14.GetOnBoardedAtSignUseCase>(
-      () => _i14.GetOnBoardedAtSignUseCase(get<_i6.IAtsignOnBoardingFacade>()));
-  gh.lazySingleton<_i15.AtPlatformBloc>(
-      () => _i15.AtPlatformBloc(get<_i13.GetAllKeysUseCase>()));
+  gh.lazySingleton<_i14.GetKeyValueUseCase>(
+      () => _i14.GetKeyValueUseCase(get<_i4.IAtPlatformFacade>()));
+  gh.factory<_i15.GetOnBoardedAtSignUseCase>(
+      () => _i15.GetOnBoardedAtSignUseCase(get<_i6.IAtsignOnBoardingFacade>()));
+  gh.lazySingleton<_i16.AtPlatformBloc>(() => _i16.AtPlatformBloc(
+      get<_i13.GetAllKeysUseCase>(), get<_i14.GetKeyValueUseCase>()));
   return get;
 }

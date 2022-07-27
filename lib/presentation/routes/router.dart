@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:dess_explorer/presentation/at_platform/widgets/json_viewer_widget.dart';
 import 'package:dess_explorer/presentation/home/app_shell.dart';
 import 'package:dess_explorer/presentation/home/home_page.dart';
 import 'package:dess_explorer/presentation/on_boarding/on_boarding_page.dart';
@@ -22,6 +23,7 @@ other stuff. AutoRoute does all that for you and much more.
     AutoRoute<dynamic>(page: HomePage),
     AutoRoute<dynamic>(page: AppShell),
     AutoRoute<dynamic>(page: SettingPage),
+    AutoRoute<dynamic>(page: JsonViewerWidget),
   ],
 )
 class $Router {}

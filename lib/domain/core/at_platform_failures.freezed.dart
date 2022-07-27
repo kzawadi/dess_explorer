@@ -23,6 +23,13 @@ mixin _$AtPlatformFailure {
     required TResult Function() serverError,
     required TResult Function() failToSetOnBoardData,
     required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +39,13 @@ mixin _$AtPlatformFailure {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +55,13 @@ mixin _$AtPlatformFailure {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +73,16 @@ mixin _$AtPlatformFailure {
     required TResult Function(ServerError value) serverError,
     required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
     required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +93,15 @@ mixin _$AtPlatformFailure {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +112,15 @@ mixin _$AtPlatformFailure {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,6 +189,13 @@ class _$CancelledByUser implements CancelledByUser {
     required TResult Function() serverError,
     required TResult Function() failToSetOnBoardData,
     required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
   }) {
     return cancelledByUser();
   }
@@ -152,6 +208,13 @@ class _$CancelledByUser implements CancelledByUser {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
   }) {
     return cancelledByUser?.call();
   }
@@ -164,6 +227,13 @@ class _$CancelledByUser implements CancelledByUser {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
     required TResult orElse(),
   }) {
     if (cancelledByUser != null) {
@@ -181,6 +251,16 @@ class _$CancelledByUser implements CancelledByUser {
     required TResult Function(ServerError value) serverError,
     required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
     required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
   }) {
     return cancelledByUser(this);
   }
@@ -194,6 +274,15 @@ class _$CancelledByUser implements CancelledByUser {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
   }) {
     return cancelledByUser?.call(this);
   }
@@ -207,6 +296,15 @@ class _$CancelledByUser implements CancelledByUser {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
     required TResult orElse(),
   }) {
     if (cancelledByUser != null) {
@@ -272,6 +370,13 @@ class _$FailedToGetgetApplicationSupportDirectory
     required TResult Function() serverError,
     required TResult Function() failToSetOnBoardData,
     required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
   }) {
     return failedToGetgetApplicationSupportDirectory();
   }
@@ -284,6 +389,13 @@ class _$FailedToGetgetApplicationSupportDirectory
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
   }) {
     return failedToGetgetApplicationSupportDirectory?.call();
   }
@@ -296,6 +408,13 @@ class _$FailedToGetgetApplicationSupportDirectory
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
     required TResult orElse(),
   }) {
     if (failedToGetgetApplicationSupportDirectory != null) {
@@ -313,6 +432,16 @@ class _$FailedToGetgetApplicationSupportDirectory
     required TResult Function(ServerError value) serverError,
     required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
     required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
   }) {
     return failedToGetgetApplicationSupportDirectory(this);
   }
@@ -326,6 +455,15 @@ class _$FailedToGetgetApplicationSupportDirectory
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
   }) {
     return failedToGetgetApplicationSupportDirectory?.call(this);
   }
@@ -339,6 +477,15 @@ class _$FailedToGetgetApplicationSupportDirectory
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
     required TResult orElse(),
   }) {
     if (failedToGetgetApplicationSupportDirectory != null) {
@@ -400,6 +547,13 @@ class _$ServerError implements ServerError {
     required TResult Function() serverError,
     required TResult Function() failToSetOnBoardData,
     required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
   }) {
     return serverError();
   }
@@ -412,6 +566,13 @@ class _$ServerError implements ServerError {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
   }) {
     return serverError?.call();
   }
@@ -424,6 +585,13 @@ class _$ServerError implements ServerError {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -441,6 +609,16 @@ class _$ServerError implements ServerError {
     required TResult Function(ServerError value) serverError,
     required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
     required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
   }) {
     return serverError(this);
   }
@@ -454,6 +632,15 @@ class _$ServerError implements ServerError {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
   }) {
     return serverError?.call(this);
   }
@@ -467,6 +654,15 @@ class _$ServerError implements ServerError {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -526,6 +722,13 @@ class _$FailToSetOnBoardData implements FailToSetOnBoardData {
     required TResult Function() serverError,
     required TResult Function() failToSetOnBoardData,
     required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
   }) {
     return failToSetOnBoardData();
   }
@@ -538,6 +741,13 @@ class _$FailToSetOnBoardData implements FailToSetOnBoardData {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
   }) {
     return failToSetOnBoardData?.call();
   }
@@ -550,6 +760,13 @@ class _$FailToSetOnBoardData implements FailToSetOnBoardData {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
     required TResult orElse(),
   }) {
     if (failToSetOnBoardData != null) {
@@ -567,6 +784,16 @@ class _$FailToSetOnBoardData implements FailToSetOnBoardData {
     required TResult Function(ServerError value) serverError,
     required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
     required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
   }) {
     return failToSetOnBoardData(this);
   }
@@ -580,6 +807,15 @@ class _$FailToSetOnBoardData implements FailToSetOnBoardData {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
   }) {
     return failToSetOnBoardData?.call(this);
   }
@@ -593,6 +829,15 @@ class _$FailToSetOnBoardData implements FailToSetOnBoardData {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
     required TResult orElse(),
   }) {
     if (failToSetOnBoardData != null) {
@@ -652,6 +897,13 @@ class _$_FailToSetUsername implements _FailToSetUsername {
     required TResult Function() serverError,
     required TResult Function() failToSetOnBoardData,
     required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
   }) {
     return failToSetUsername();
   }
@@ -664,6 +916,13 @@ class _$_FailToSetUsername implements _FailToSetUsername {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
   }) {
     return failToSetUsername?.call();
   }
@@ -676,6 +935,13 @@ class _$_FailToSetUsername implements _FailToSetUsername {
     TResult Function()? serverError,
     TResult Function()? failToSetOnBoardData,
     TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
     required TResult orElse(),
   }) {
     if (failToSetUsername != null) {
@@ -693,6 +959,16 @@ class _$_FailToSetUsername implements _FailToSetUsername {
     required TResult Function(ServerError value) serverError,
     required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
     required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
   }) {
     return failToSetUsername(this);
   }
@@ -706,6 +982,15 @@ class _$_FailToSetUsername implements _FailToSetUsername {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
   }) {
     return failToSetUsername?.call(this);
   }
@@ -719,6 +1004,15 @@ class _$_FailToSetUsername implements _FailToSetUsername {
     TResult Function(ServerError value)? serverError,
     TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
     TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
     required TResult orElse(),
   }) {
     if (failToSetUsername != null) {
@@ -730,4 +1024,1240 @@ class _$_FailToSetUsername implements _FailToSetUsername {
 
 abstract class _FailToSetUsername implements AtPlatformFailure {
   const factory _FailToSetUsername() = _$_FailToSetUsername;
+}
+
+/// @nodoc
+abstract class _$$_FailToDecryptCopyWith<$Res> {
+  factory _$$_FailToDecryptCopyWith(
+          _$_FailToDecrypt value, $Res Function(_$_FailToDecrypt) then) =
+      __$$_FailToDecryptCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_FailToDecryptCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_FailToDecryptCopyWith<$Res> {
+  __$$_FailToDecryptCopyWithImpl(
+      _$_FailToDecrypt _value, $Res Function(_$_FailToDecrypt) _then)
+      : super(_value, (v) => _then(v as _$_FailToDecrypt));
+
+  @override
+  _$_FailToDecrypt get _value => super._value as _$_FailToDecrypt;
+}
+
+/// @nodoc
+
+class _$_FailToDecrypt implements _FailToDecrypt {
+  const _$_FailToDecrypt();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.failToDecrypt()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_FailToDecrypt);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return failToDecrypt();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return failToDecrypt?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (failToDecrypt != null) {
+      return failToDecrypt();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return failToDecrypt(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return failToDecrypt?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (failToDecrypt != null) {
+      return failToDecrypt(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FailToDecrypt implements AtPlatformFailure {
+  const factory _FailToDecrypt() = _$_FailToDecrypt;
+}
+
+/// @nodoc
+abstract class _$$_KeyNotFoundExceptionCopyWith<$Res> {
+  factory _$$_KeyNotFoundExceptionCopyWith(_$_KeyNotFoundException value,
+          $Res Function(_$_KeyNotFoundException) then) =
+      __$$_KeyNotFoundExceptionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_KeyNotFoundExceptionCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_KeyNotFoundExceptionCopyWith<$Res> {
+  __$$_KeyNotFoundExceptionCopyWithImpl(_$_KeyNotFoundException _value,
+      $Res Function(_$_KeyNotFoundException) _then)
+      : super(_value, (v) => _then(v as _$_KeyNotFoundException));
+
+  @override
+  _$_KeyNotFoundException get _value => super._value as _$_KeyNotFoundException;
+}
+
+/// @nodoc
+
+class _$_KeyNotFoundException implements _KeyNotFoundException {
+  const _$_KeyNotFoundException();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.keyNotFoundException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_KeyNotFoundException);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return keyNotFoundException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return keyNotFoundException?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (keyNotFoundException != null) {
+      return keyNotFoundException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return keyNotFoundException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return keyNotFoundException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (keyNotFoundException != null) {
+      return keyNotFoundException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _KeyNotFoundException implements AtPlatformFailure {
+  const factory _KeyNotFoundException() = _$_KeyNotFoundException;
+}
+
+/// @nodoc
+abstract class _$$_AtPublicKeyChangeExceptionCopyWith<$Res> {
+  factory _$$_AtPublicKeyChangeExceptionCopyWith(
+          _$_AtPublicKeyChangeException value,
+          $Res Function(_$_AtPublicKeyChangeException) then) =
+      __$$_AtPublicKeyChangeExceptionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_AtPublicKeyChangeExceptionCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_AtPublicKeyChangeExceptionCopyWith<$Res> {
+  __$$_AtPublicKeyChangeExceptionCopyWithImpl(
+      _$_AtPublicKeyChangeException _value,
+      $Res Function(_$_AtPublicKeyChangeException) _then)
+      : super(_value, (v) => _then(v as _$_AtPublicKeyChangeException));
+
+  @override
+  _$_AtPublicKeyChangeException get _value =>
+      super._value as _$_AtPublicKeyChangeException;
+}
+
+/// @nodoc
+
+class _$_AtPublicKeyChangeException implements _AtPublicKeyChangeException {
+  const _$_AtPublicKeyChangeException();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.atPublicKeyChangeException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AtPublicKeyChangeException);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return atPublicKeyChangeException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return atPublicKeyChangeException?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (atPublicKeyChangeException != null) {
+      return atPublicKeyChangeException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return atPublicKeyChangeException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return atPublicKeyChangeException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (atPublicKeyChangeException != null) {
+      return atPublicKeyChangeException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AtPublicKeyChangeException implements AtPlatformFailure {
+  const factory _AtPublicKeyChangeException() = _$_AtPublicKeyChangeException;
+}
+
+/// @nodoc
+abstract class _$$_SharedKeyNotFoundExceptionCopyWith<$Res> {
+  factory _$$_SharedKeyNotFoundExceptionCopyWith(
+          _$_SharedKeyNotFoundException value,
+          $Res Function(_$_SharedKeyNotFoundException) then) =
+      __$$_SharedKeyNotFoundExceptionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_SharedKeyNotFoundExceptionCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_SharedKeyNotFoundExceptionCopyWith<$Res> {
+  __$$_SharedKeyNotFoundExceptionCopyWithImpl(
+      _$_SharedKeyNotFoundException _value,
+      $Res Function(_$_SharedKeyNotFoundException) _then)
+      : super(_value, (v) => _then(v as _$_SharedKeyNotFoundException));
+
+  @override
+  _$_SharedKeyNotFoundException get _value =>
+      super._value as _$_SharedKeyNotFoundException;
+}
+
+/// @nodoc
+
+class _$_SharedKeyNotFoundException implements _SharedKeyNotFoundException {
+  const _$_SharedKeyNotFoundException();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.sharedKeyNotFoundException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SharedKeyNotFoundException);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return sharedKeyNotFoundException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return sharedKeyNotFoundException?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (sharedKeyNotFoundException != null) {
+      return sharedKeyNotFoundException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return sharedKeyNotFoundException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return sharedKeyNotFoundException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (sharedKeyNotFoundException != null) {
+      return sharedKeyNotFoundException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SharedKeyNotFoundException implements AtPlatformFailure {
+  const factory _SharedKeyNotFoundException() = _$_SharedKeyNotFoundException;
+}
+
+/// @nodoc
+abstract class _$$_SelfKeyNotFoundExceptionCopyWith<$Res> {
+  factory _$$_SelfKeyNotFoundExceptionCopyWith(
+          _$_SelfKeyNotFoundException value,
+          $Res Function(_$_SelfKeyNotFoundException) then) =
+      __$$_SelfKeyNotFoundExceptionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_SelfKeyNotFoundExceptionCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_SelfKeyNotFoundExceptionCopyWith<$Res> {
+  __$$_SelfKeyNotFoundExceptionCopyWithImpl(_$_SelfKeyNotFoundException _value,
+      $Res Function(_$_SelfKeyNotFoundException) _then)
+      : super(_value, (v) => _then(v as _$_SelfKeyNotFoundException));
+
+  @override
+  _$_SelfKeyNotFoundException get _value =>
+      super._value as _$_SelfKeyNotFoundException;
+}
+
+/// @nodoc
+
+class _$_SelfKeyNotFoundException implements _SelfKeyNotFoundException {
+  const _$_SelfKeyNotFoundException();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.selfKeyNotFoundException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SelfKeyNotFoundException);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return selfKeyNotFoundException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return selfKeyNotFoundException?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (selfKeyNotFoundException != null) {
+      return selfKeyNotFoundException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return selfKeyNotFoundException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return selfKeyNotFoundException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (selfKeyNotFoundException != null) {
+      return selfKeyNotFoundException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelfKeyNotFoundException implements AtPlatformFailure {
+  const factory _SelfKeyNotFoundException() = _$_SelfKeyNotFoundException;
+}
+
+/// @nodoc
+abstract class _$$_AtClientExceptionCopyWith<$Res> {
+  factory _$$_AtClientExceptionCopyWith(_$_AtClientException value,
+          $Res Function(_$_AtClientException) then) =
+      __$$_AtClientExceptionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_AtClientExceptionCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_AtClientExceptionCopyWith<$Res> {
+  __$$_AtClientExceptionCopyWithImpl(
+      _$_AtClientException _value, $Res Function(_$_AtClientException) _then)
+      : super(_value, (v) => _then(v as _$_AtClientException));
+
+  @override
+  _$_AtClientException get _value => super._value as _$_AtClientException;
+}
+
+/// @nodoc
+
+class _$_AtClientException implements _AtClientException {
+  const _$_AtClientException();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.atClientException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_AtClientException);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return atClientException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return atClientException?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (atClientException != null) {
+      return atClientException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return atClientException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return atClientException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (atClientException != null) {
+      return atClientException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AtClientException implements AtPlatformFailure {
+  const factory _AtClientException() = _$_AtClientException;
+}
+
+/// @nodoc
+abstract class _$$_AtKeyExceptionCopyWith<$Res> {
+  factory _$$_AtKeyExceptionCopyWith(
+          _$_AtKeyException value, $Res Function(_$_AtKeyException) then) =
+      __$$_AtKeyExceptionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_AtKeyExceptionCopyWithImpl<$Res>
+    extends _$AtPlatformFailureCopyWithImpl<$Res>
+    implements _$$_AtKeyExceptionCopyWith<$Res> {
+  __$$_AtKeyExceptionCopyWithImpl(
+      _$_AtKeyException _value, $Res Function(_$_AtKeyException) _then)
+      : super(_value, (v) => _then(v as _$_AtKeyException));
+
+  @override
+  _$_AtKeyException get _value => super._value as _$_AtKeyException;
+}
+
+/// @nodoc
+
+class _$_AtKeyException implements _AtKeyException {
+  const _$_AtKeyException();
+
+  @override
+  String toString() {
+    return 'AtPlatformFailure.atKeyException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_AtKeyException);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() cancelledByUser,
+    required TResult Function() failedToGetgetApplicationSupportDirectory,
+    required TResult Function() serverError,
+    required TResult Function() failToSetOnBoardData,
+    required TResult Function() failToSetUsername,
+    required TResult Function() failToDecrypt,
+    required TResult Function() keyNotFoundException,
+    required TResult Function() atPublicKeyChangeException,
+    required TResult Function() sharedKeyNotFoundException,
+    required TResult Function() selfKeyNotFoundException,
+    required TResult Function() atClientException,
+    required TResult Function() atKeyException,
+  }) {
+    return atKeyException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+  }) {
+    return atKeyException?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? cancelledByUser,
+    TResult Function()? failedToGetgetApplicationSupportDirectory,
+    TResult Function()? serverError,
+    TResult Function()? failToSetOnBoardData,
+    TResult Function()? failToSetUsername,
+    TResult Function()? failToDecrypt,
+    TResult Function()? keyNotFoundException,
+    TResult Function()? atPublicKeyChangeException,
+    TResult Function()? sharedKeyNotFoundException,
+    TResult Function()? selfKeyNotFoundException,
+    TResult Function()? atClientException,
+    TResult Function()? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (atKeyException != null) {
+      return atKeyException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(FailedToGetgetApplicationSupportDirectory value)
+        failedToGetgetApplicationSupportDirectory,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(FailToSetOnBoardData value) failToSetOnBoardData,
+    required TResult Function(_FailToSetUsername value) failToSetUsername,
+    required TResult Function(_FailToDecrypt value) failToDecrypt,
+    required TResult Function(_KeyNotFoundException value) keyNotFoundException,
+    required TResult Function(_AtPublicKeyChangeException value)
+        atPublicKeyChangeException,
+    required TResult Function(_SharedKeyNotFoundException value)
+        sharedKeyNotFoundException,
+    required TResult Function(_SelfKeyNotFoundException value)
+        selfKeyNotFoundException,
+    required TResult Function(_AtClientException value) atClientException,
+    required TResult Function(_AtKeyException value) atKeyException,
+  }) {
+    return atKeyException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+  }) {
+    return atKeyException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(FailedToGetgetApplicationSupportDirectory value)?
+        failedToGetgetApplicationSupportDirectory,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(FailToSetOnBoardData value)? failToSetOnBoardData,
+    TResult Function(_FailToSetUsername value)? failToSetUsername,
+    TResult Function(_FailToDecrypt value)? failToDecrypt,
+    TResult Function(_KeyNotFoundException value)? keyNotFoundException,
+    TResult Function(_AtPublicKeyChangeException value)?
+        atPublicKeyChangeException,
+    TResult Function(_SharedKeyNotFoundException value)?
+        sharedKeyNotFoundException,
+    TResult Function(_SelfKeyNotFoundException value)? selfKeyNotFoundException,
+    TResult Function(_AtClientException value)? atClientException,
+    TResult Function(_AtKeyException value)? atKeyException,
+    required TResult orElse(),
+  }) {
+    if (atKeyException != null) {
+      return atKeyException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AtKeyException implements AtPlatformFailure {
+  const factory _AtKeyException() = _$_AtKeyException;
 }

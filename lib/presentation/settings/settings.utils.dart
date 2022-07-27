@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class SettingsThemeMode {
+  const SettingsThemeMode();
   static const light = 'light';
   static const dark = 'dark';
   static const system = 'system';
-  const SettingsThemeMode();
 }
 
 ThemeMode getThemeMode(String themeMode) {
@@ -33,13 +33,12 @@ enum SupportedIDE {
 }
 
 class IDE {
-  final String name;
-  final LaunchFunction launch;
-  final Widget icon;
-
   IDE(
     SupportedIDE ideName,
     this.icon,
     this.launch,
   ) : name = ideName.name;
+  final String name;
+  final LaunchFunction launch;
+  final Widget icon;
 }

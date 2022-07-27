@@ -22,6 +22,8 @@ mixin _$AtPlatformEvent {
     required TResult Function(
             String? regex, String? sharedBy, String? sharedWith)
         getAllKeys,
+    required TResult Function(AtKey atKey) getKeysValue,
+    required TResult Function() resetValues,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,6 +31,8 @@ mixin _$AtPlatformEvent {
     TResult Function()? started,
     TResult Function(String? regex, String? sharedBy, String? sharedWith)?
         getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +40,8 @@ mixin _$AtPlatformEvent {
     TResult Function()? started,
     TResult Function(String? regex, String? sharedBy, String? sharedWith)?
         getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,18 +49,24 @@ mixin _$AtPlatformEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_getAllKeys value) getAllKeys,
+    required TResult Function(_getKeysValue value) getKeysValue,
+    required TResult Function(_ResetValues value) resetValues,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +132,8 @@ class _$_Started implements _Started {
     required TResult Function(
             String? regex, String? sharedBy, String? sharedWith)
         getAllKeys,
+    required TResult Function(AtKey atKey) getKeysValue,
+    required TResult Function() resetValues,
   }) {
     return started();
   }
@@ -130,6 +144,8 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(String? regex, String? sharedBy, String? sharedWith)?
         getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
   }) {
     return started?.call();
   }
@@ -140,6 +156,8 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(String? regex, String? sharedBy, String? sharedWith)?
         getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -153,6 +171,8 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_getAllKeys value) getAllKeys,
+    required TResult Function(_getKeysValue value) getKeysValue,
+    required TResult Function(_ResetValues value) resetValues,
   }) {
     return started(this);
   }
@@ -162,6 +182,8 @@ class _$_Started implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
   }) {
     return started?.call(this);
   }
@@ -171,6 +193,8 @@ class _$_Started implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -273,6 +297,8 @@ class _$_getAllKeys implements _getAllKeys {
     required TResult Function(
             String? regex, String? sharedBy, String? sharedWith)
         getAllKeys,
+    required TResult Function(AtKey atKey) getKeysValue,
+    required TResult Function() resetValues,
   }) {
     return getAllKeys(regex, sharedBy, sharedWith);
   }
@@ -283,6 +309,8 @@ class _$_getAllKeys implements _getAllKeys {
     TResult Function()? started,
     TResult Function(String? regex, String? sharedBy, String? sharedWith)?
         getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
   }) {
     return getAllKeys?.call(regex, sharedBy, sharedWith);
   }
@@ -293,6 +321,8 @@ class _$_getAllKeys implements _getAllKeys {
     TResult Function()? started,
     TResult Function(String? regex, String? sharedBy, String? sharedWith)?
         getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
     required TResult orElse(),
   }) {
     if (getAllKeys != null) {
@@ -306,6 +336,8 @@ class _$_getAllKeys implements _getAllKeys {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_getAllKeys value) getAllKeys,
+    required TResult Function(_getKeysValue value) getKeysValue,
+    required TResult Function(_ResetValues value) resetValues,
   }) {
     return getAllKeys(this);
   }
@@ -315,6 +347,8 @@ class _$_getAllKeys implements _getAllKeys {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
   }) {
     return getAllKeys?.call(this);
   }
@@ -324,6 +358,8 @@ class _$_getAllKeys implements _getAllKeys {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
     required TResult orElse(),
   }) {
     if (getAllKeys != null) {
@@ -348,11 +384,284 @@ abstract class _getAllKeys implements AtPlatformEvent {
 }
 
 /// @nodoc
+abstract class _$$_getKeysValueCopyWith<$Res> {
+  factory _$$_getKeysValueCopyWith(
+          _$_getKeysValue value, $Res Function(_$_getKeysValue) then) =
+      __$$_getKeysValueCopyWithImpl<$Res>;
+  $Res call({AtKey atKey});
+}
+
+/// @nodoc
+class __$$_getKeysValueCopyWithImpl<$Res>
+    extends _$AtPlatformEventCopyWithImpl<$Res>
+    implements _$$_getKeysValueCopyWith<$Res> {
+  __$$_getKeysValueCopyWithImpl(
+      _$_getKeysValue _value, $Res Function(_$_getKeysValue) _then)
+      : super(_value, (v) => _then(v as _$_getKeysValue));
+
+  @override
+  _$_getKeysValue get _value => super._value as _$_getKeysValue;
+
+  @override
+  $Res call({
+    Object? atKey = freezed,
+  }) {
+    return _then(_$_getKeysValue(
+      atKey == freezed
+          ? _value.atKey
+          : atKey // ignore: cast_nullable_to_non_nullable
+              as AtKey,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_getKeysValue implements _getKeysValue {
+  const _$_getKeysValue(this.atKey);
+
+  @override
+  final AtKey atKey;
+
+  @override
+  String toString() {
+    return 'AtPlatformEvent.getKeysValue(atKey: $atKey)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_getKeysValue &&
+            const DeepCollectionEquality().equals(other.atKey, atKey));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(atKey));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_getKeysValueCopyWith<_$_getKeysValue> get copyWith =>
+      __$$_getKeysValueCopyWithImpl<_$_getKeysValue>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(
+            String? regex, String? sharedBy, String? sharedWith)
+        getAllKeys,
+    required TResult Function(AtKey atKey) getKeysValue,
+    required TResult Function() resetValues,
+  }) {
+    return getKeysValue(atKey);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? regex, String? sharedBy, String? sharedWith)?
+        getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
+  }) {
+    return getKeysValue?.call(atKey);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? regex, String? sharedBy, String? sharedWith)?
+        getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
+    required TResult orElse(),
+  }) {
+    if (getKeysValue != null) {
+      return getKeysValue(atKey);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_getAllKeys value) getAllKeys,
+    required TResult Function(_getKeysValue value) getKeysValue,
+    required TResult Function(_ResetValues value) resetValues,
+  }) {
+    return getKeysValue(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
+  }) {
+    return getKeysValue?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
+    required TResult orElse(),
+  }) {
+    if (getKeysValue != null) {
+      return getKeysValue(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _getKeysValue implements AtPlatformEvent {
+  const factory _getKeysValue(final AtKey atKey) = _$_getKeysValue;
+
+  AtKey get atKey;
+  @JsonKey(ignore: true)
+  _$$_getKeysValueCopyWith<_$_getKeysValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ResetValuesCopyWith<$Res> {
+  factory _$$_ResetValuesCopyWith(
+          _$_ResetValues value, $Res Function(_$_ResetValues) then) =
+      __$$_ResetValuesCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_ResetValuesCopyWithImpl<$Res>
+    extends _$AtPlatformEventCopyWithImpl<$Res>
+    implements _$$_ResetValuesCopyWith<$Res> {
+  __$$_ResetValuesCopyWithImpl(
+      _$_ResetValues _value, $Res Function(_$_ResetValues) _then)
+      : super(_value, (v) => _then(v as _$_ResetValues));
+
+  @override
+  _$_ResetValues get _value => super._value as _$_ResetValues;
+}
+
+/// @nodoc
+
+class _$_ResetValues implements _ResetValues {
+  const _$_ResetValues();
+
+  @override
+  String toString() {
+    return 'AtPlatformEvent.resetValues()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_ResetValues);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(
+            String? regex, String? sharedBy, String? sharedWith)
+        getAllKeys,
+    required TResult Function(AtKey atKey) getKeysValue,
+    required TResult Function() resetValues,
+  }) {
+    return resetValues();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? regex, String? sharedBy, String? sharedWith)?
+        getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
+  }) {
+    return resetValues?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? regex, String? sharedBy, String? sharedWith)?
+        getAllKeys,
+    TResult Function(AtKey atKey)? getKeysValue,
+    TResult Function()? resetValues,
+    required TResult orElse(),
+  }) {
+    if (resetValues != null) {
+      return resetValues();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_getAllKeys value) getAllKeys,
+    required TResult Function(_getKeysValue value) getKeysValue,
+    required TResult Function(_ResetValues value) resetValues,
+  }) {
+    return resetValues(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
+  }) {
+    return resetValues?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_getAllKeys value)? getAllKeys,
+    TResult Function(_getKeysValue value)? getKeysValue,
+    TResult Function(_ResetValues value)? resetValues,
+    required TResult orElse(),
+  }) {
+    if (resetValues != null) {
+      return resetValues(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetValues implements AtPlatformEvent {
+  const factory _ResetValues() = _$_ResetValues;
+}
+
+/// @nodoc
 mixin _$AtPlatformState {
   bool get showErrorMessages => throw _privateConstructorUsedError;
   bool get liveData => throw _privateConstructorUsedError;
   AtPlatformFailure? get error => throw _privateConstructorUsedError;
   List<AtKey>? get data => throw _privateConstructorUsedError;
+  Value? get atValue => throw _privateConstructorUsedError;
+  bool get refreshValues => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AtPlatformStateCopyWith<AtPlatformState> get copyWith =>
@@ -368,7 +677,9 @@ abstract class $AtPlatformStateCopyWith<$Res> {
       {bool showErrorMessages,
       bool liveData,
       AtPlatformFailure? error,
-      List<AtKey>? data});
+      List<AtKey>? data,
+      Value? atValue,
+      bool refreshValues});
 
   $AtPlatformFailureCopyWith<$Res>? get error;
 }
@@ -388,6 +699,8 @@ class _$AtPlatformStateCopyWithImpl<$Res>
     Object? liveData = freezed,
     Object? error = freezed,
     Object? data = freezed,
+    Object? atValue = freezed,
+    Object? refreshValues = freezed,
   }) {
     return _then(_value.copyWith(
       showErrorMessages: showErrorMessages == freezed
@@ -406,6 +719,14 @@ class _$AtPlatformStateCopyWithImpl<$Res>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<AtKey>?,
+      atValue: atValue == freezed
+          ? _value.atValue
+          : atValue // ignore: cast_nullable_to_non_nullable
+              as Value?,
+      refreshValues: refreshValues == freezed
+          ? _value.refreshValues
+          : refreshValues // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -432,7 +753,9 @@ abstract class _$$_AtPlatformStateCopyWith<$Res>
       {bool showErrorMessages,
       bool liveData,
       AtPlatformFailure? error,
-      List<AtKey>? data});
+      List<AtKey>? data,
+      Value? atValue,
+      bool refreshValues});
 
   @override
   $AtPlatformFailureCopyWith<$Res>? get error;
@@ -455,6 +778,8 @@ class __$$_AtPlatformStateCopyWithImpl<$Res>
     Object? liveData = freezed,
     Object? error = freezed,
     Object? data = freezed,
+    Object? atValue = freezed,
+    Object? refreshValues = freezed,
   }) {
     return _then(_$_AtPlatformState(
       showErrorMessages: showErrorMessages == freezed
@@ -473,6 +798,14 @@ class __$$_AtPlatformStateCopyWithImpl<$Res>
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<AtKey>?,
+      atValue: atValue == freezed
+          ? _value.atValue
+          : atValue // ignore: cast_nullable_to_non_nullable
+              as Value?,
+      refreshValues: refreshValues == freezed
+          ? _value.refreshValues
+          : refreshValues // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -484,7 +817,9 @@ class _$_AtPlatformState implements _AtPlatformState {
       {required this.showErrorMessages,
       required this.liveData,
       this.error,
-      final List<AtKey>? data})
+      final List<AtKey>? data,
+      this.atValue,
+      required this.refreshValues})
       : _data = data;
 
   @override
@@ -503,8 +838,13 @@ class _$_AtPlatformState implements _AtPlatformState {
   }
 
   @override
+  final Value? atValue;
+  @override
+  final bool refreshValues;
+
+  @override
   String toString() {
-    return 'AtPlatformState(showErrorMessages: $showErrorMessages, liveData: $liveData, error: $error, data: $data)';
+    return 'AtPlatformState(showErrorMessages: $showErrorMessages, liveData: $liveData, error: $error, data: $data, atValue: $atValue, refreshValues: $refreshValues)';
   }
 
   @override
@@ -516,7 +856,10 @@ class _$_AtPlatformState implements _AtPlatformState {
                 .equals(other.showErrorMessages, showErrorMessages) &&
             const DeepCollectionEquality().equals(other.liveData, liveData) &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality().equals(other._data, _data));
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other.atValue, atValue) &&
+            const DeepCollectionEquality()
+                .equals(other.refreshValues, refreshValues));
   }
 
   @override
@@ -525,7 +868,9 @@ class _$_AtPlatformState implements _AtPlatformState {
       const DeepCollectionEquality().hash(showErrorMessages),
       const DeepCollectionEquality().hash(liveData),
       const DeepCollectionEquality().hash(error),
-      const DeepCollectionEquality().hash(_data));
+      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(atValue),
+      const DeepCollectionEquality().hash(refreshValues));
 
   @JsonKey(ignore: true)
   @override
@@ -538,7 +883,9 @@ abstract class _AtPlatformState implements AtPlatformState {
       {required final bool showErrorMessages,
       required final bool liveData,
       final AtPlatformFailure? error,
-      final List<AtKey>? data}) = _$_AtPlatformState;
+      final List<AtKey>? data,
+      final Value? atValue,
+      required final bool refreshValues}) = _$_AtPlatformState;
 
   @override
   bool get showErrorMessages;
@@ -548,6 +895,10 @@ abstract class _AtPlatformState implements AtPlatformState {
   AtPlatformFailure? get error;
   @override
   List<AtKey>? get data;
+  @override
+  Value? get atValue;
+  @override
+  bool get refreshValues;
   @override
   @JsonKey(ignore: true)
   _$$_AtPlatformStateCopyWith<_$_AtPlatformState> get copyWith =>

@@ -1,11 +1,13 @@
 import 'dart:ui';
 
 import 'package:at_sync_ui_flutter/services/at_sync_ui_services.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:dess_explorer/application/at_platform/bloc/at_platform_bloc.dart';
 import 'package:dess_explorer/injections.dart';
 import 'package:dess_explorer/presentation/components/custom_sync_widget.dart';
 import 'package:dess_explorer/presentation/components/expansion_tile.dart';
 import 'package:dess_explorer/presentation/home/widgets/screen.dart';
+import 'package:dess_explorer/presentation/routes/router.gr.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -49,6 +51,17 @@ class AtPlatformView extends HookWidget {
                       subtitle: Text(state.data![i].namespace ?? ''),
                       trailing: Text(state.data![i].sharedWith ?? ''),
                       children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            context.read<AtPlatformBloc>().add(
+                                  AtPlatformEvent.getKeysValue(state.data![i]),
+                                );
+
+                            AutoRouter.of(context)
+                                .navigate(const JsonViewerWidgetRoute());
+                          },
+                          child: null,
+                        ),
                         MetadataRow(
                           name: 'available At',
                           value:

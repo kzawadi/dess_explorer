@@ -7,11 +7,14 @@ class AtPlatformState with _$AtPlatformState {
     required bool liveData,
     AtPlatformFailure? error,
     List<AtKey>? data,
+    Value? atValue,
+    required bool refreshValues,
   }) = _AtPlatformState;
 
   factory AtPlatformState.initial() => const AtPlatformState(
         showErrorMessages: false,
         liveData: false,
+        refreshValues: false,
       );
 
   // const factory AtPlatformState.keys(

@@ -8,4 +8,7 @@ class AtPlatformEvent with _$AtPlatformEvent {
     String? sharedBy,
     String? sharedWith,
   }) = _getAllKeys;
+
+  const factory AtPlatformEvent.getKeysValue(AtKey atKey) = _getKeysValue;
+  const factory AtPlatformEvent.resetValues() = _ResetValues;
 }

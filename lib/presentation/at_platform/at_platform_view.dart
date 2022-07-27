@@ -24,7 +24,8 @@ class AtPlatformView extends HookWidget {
       listener: (context, state) {},
       builder: (context, state) {
         return DessScreen(
-          title: 'At PLATOFORM',
+          title: state.secondaryServerAdress,
+          titleFontSize: 15,
           actions: [
             StreamBuilder<AtSyncUIStatus>(
               stream: AtSyncUIService().atSyncUIListener,

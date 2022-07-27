@@ -57,4 +57,12 @@ class AtPlatformFacade implements IAtPlatformFacade {
       return left(const AtPlatformFailure.atKeyException());
     }
   }
+
+  @override
+  Future<Option<String>> getSecondaryServerAdress({String? atSign}) async {
+    final b = _atClientManager.atClient.getCurrentAtSign();
+    return _atClientManager.secondaryAddressFinder!
+        .findSecondary(atSign ?? b!)
+        .then((value) => optionOf(value.toString()));
+  }
 }

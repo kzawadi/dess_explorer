@@ -10,4 +10,6 @@ abstract class IAtPlatformFacade {
     String? sharedWith,
   );
   Future<Either<AtPlatformFailure, Value>> getValue(AtKey atKey);
+
+  Future<Option<String>> getSecondaryServerAdress({String? atSign});
 }

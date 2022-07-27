@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,7 +47,7 @@ class Caption extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return AutoSizeText(
       text,
       style: Theme.of(context).textTheme.caption,
     );
@@ -91,16 +92,21 @@ class Heading extends StatelessWidget {
   const Heading(
     this.text, {
     Key? key,
+    required this.fontSize,
   }) : super(key: key);
 
   /// Content
   final String text;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return AutoSizeText(
       text,
-      style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 18),
+      style:
+          Theme.of(context).textTheme.headline6!.copyWith(fontSize: fontSize),
+      maxLines: 1,
+      wrapWords: false,
     );
   }
 }

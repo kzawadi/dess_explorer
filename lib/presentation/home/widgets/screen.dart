@@ -12,6 +12,7 @@ class DessScreen extends StatelessWidget {
     this.extendBody = true,
     required this.child,
     Key? key,
+    this.titleFontSize = 10,
   }) : super(key: key);
 
   /// Screen title
@@ -25,6 +26,8 @@ class DessScreen extends StatelessWidget {
 
   /// Child widget
   final Widget child;
+
+  final double titleFontSize;
 
   /// Should extend body
   final bool extendBody;
@@ -53,7 +56,7 @@ class DessScreen extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      Heading(title),
+                      Heading(title, fontSize: titleFontSize),
                       const Spacer(),
                       ...actions,
                       const SizedBox(width: 10),

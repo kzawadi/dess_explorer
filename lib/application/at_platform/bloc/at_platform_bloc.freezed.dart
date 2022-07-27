@@ -661,6 +661,7 @@ mixin _$AtPlatformState {
   AtPlatformFailure? get error => throw _privateConstructorUsedError;
   List<AtKey>? get data => throw _privateConstructorUsedError;
   Value? get atValue => throw _privateConstructorUsedError;
+  String get secondaryServerAdress => throw _privateConstructorUsedError;
   bool get refreshValues => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -679,6 +680,7 @@ abstract class $AtPlatformStateCopyWith<$Res> {
       AtPlatformFailure? error,
       List<AtKey>? data,
       Value? atValue,
+      String secondaryServerAdress,
       bool refreshValues});
 
   $AtPlatformFailureCopyWith<$Res>? get error;
@@ -700,6 +702,7 @@ class _$AtPlatformStateCopyWithImpl<$Res>
     Object? error = freezed,
     Object? data = freezed,
     Object? atValue = freezed,
+    Object? secondaryServerAdress = freezed,
     Object? refreshValues = freezed,
   }) {
     return _then(_value.copyWith(
@@ -723,6 +726,10 @@ class _$AtPlatformStateCopyWithImpl<$Res>
           ? _value.atValue
           : atValue // ignore: cast_nullable_to_non_nullable
               as Value?,
+      secondaryServerAdress: secondaryServerAdress == freezed
+          ? _value.secondaryServerAdress
+          : secondaryServerAdress // ignore: cast_nullable_to_non_nullable
+              as String,
       refreshValues: refreshValues == freezed
           ? _value.refreshValues
           : refreshValues // ignore: cast_nullable_to_non_nullable
@@ -755,6 +762,7 @@ abstract class _$$_AtPlatformStateCopyWith<$Res>
       AtPlatformFailure? error,
       List<AtKey>? data,
       Value? atValue,
+      String secondaryServerAdress,
       bool refreshValues});
 
   @override
@@ -779,6 +787,7 @@ class __$$_AtPlatformStateCopyWithImpl<$Res>
     Object? error = freezed,
     Object? data = freezed,
     Object? atValue = freezed,
+    Object? secondaryServerAdress = freezed,
     Object? refreshValues = freezed,
   }) {
     return _then(_$_AtPlatformState(
@@ -802,6 +811,10 @@ class __$$_AtPlatformStateCopyWithImpl<$Res>
           ? _value.atValue
           : atValue // ignore: cast_nullable_to_non_nullable
               as Value?,
+      secondaryServerAdress: secondaryServerAdress == freezed
+          ? _value.secondaryServerAdress
+          : secondaryServerAdress // ignore: cast_nullable_to_non_nullable
+              as String,
       refreshValues: refreshValues == freezed
           ? _value.refreshValues
           : refreshValues // ignore: cast_nullable_to_non_nullable
@@ -819,6 +832,7 @@ class _$_AtPlatformState implements _AtPlatformState {
       this.error,
       final List<AtKey>? data,
       this.atValue,
+      required this.secondaryServerAdress,
       required this.refreshValues})
       : _data = data;
 
@@ -840,11 +854,13 @@ class _$_AtPlatformState implements _AtPlatformState {
   @override
   final Value? atValue;
   @override
+  final String secondaryServerAdress;
+  @override
   final bool refreshValues;
 
   @override
   String toString() {
-    return 'AtPlatformState(showErrorMessages: $showErrorMessages, liveData: $liveData, error: $error, data: $data, atValue: $atValue, refreshValues: $refreshValues)';
+    return 'AtPlatformState(showErrorMessages: $showErrorMessages, liveData: $liveData, error: $error, data: $data, atValue: $atValue, secondaryServerAdress: $secondaryServerAdress, refreshValues: $refreshValues)';
   }
 
   @override
@@ -859,6 +875,8 @@ class _$_AtPlatformState implements _AtPlatformState {
             const DeepCollectionEquality().equals(other._data, _data) &&
             const DeepCollectionEquality().equals(other.atValue, atValue) &&
             const DeepCollectionEquality()
+                .equals(other.secondaryServerAdress, secondaryServerAdress) &&
+            const DeepCollectionEquality()
                 .equals(other.refreshValues, refreshValues));
   }
 
@@ -870,6 +888,7 @@ class _$_AtPlatformState implements _AtPlatformState {
       const DeepCollectionEquality().hash(error),
       const DeepCollectionEquality().hash(_data),
       const DeepCollectionEquality().hash(atValue),
+      const DeepCollectionEquality().hash(secondaryServerAdress),
       const DeepCollectionEquality().hash(refreshValues));
 
   @JsonKey(ignore: true)
@@ -885,6 +904,7 @@ abstract class _AtPlatformState implements AtPlatformState {
       final AtPlatformFailure? error,
       final List<AtKey>? data,
       final Value? atValue,
+      required final String secondaryServerAdress,
       required final bool refreshValues}) = _$_AtPlatformState;
 
   @override
@@ -897,6 +917,8 @@ abstract class _AtPlatformState implements AtPlatformState {
   List<AtKey>? get data;
   @override
   Value? get atValue;
+  @override
+  String get secondaryServerAdress;
   @override
   bool get refreshValues;
   @override

@@ -18,6 +18,7 @@ import 'package:dess_explorer/shared/images.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:injectable/injectable.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -72,7 +73,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
             (value) async {
               await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge)
                   .then((value) {});
-              return runApp(await builder());
+              return runApp(ProviderScope(child: await builder()));
             },
           );
         },

@@ -661,6 +661,7 @@ mixin _$AtPlatformState {
   AtPlatformFailure? get error => throw _privateConstructorUsedError;
   List<AtKey>? get data => throw _privateConstructorUsedError;
   Value? get atValue => throw _privateConstructorUsedError;
+  Option<AtClientPreference>? get prefs => throw _privateConstructorUsedError;
   String get secondaryServerAdress => throw _privateConstructorUsedError;
   bool get refreshValues => throw _privateConstructorUsedError;
 
@@ -680,6 +681,7 @@ abstract class $AtPlatformStateCopyWith<$Res> {
       AtPlatformFailure? error,
       List<AtKey>? data,
       Value? atValue,
+      Option<AtClientPreference>? prefs,
       String secondaryServerAdress,
       bool refreshValues});
 
@@ -702,6 +704,7 @@ class _$AtPlatformStateCopyWithImpl<$Res>
     Object? error = freezed,
     Object? data = freezed,
     Object? atValue = freezed,
+    Object? prefs = freezed,
     Object? secondaryServerAdress = freezed,
     Object? refreshValues = freezed,
   }) {
@@ -726,6 +729,10 @@ class _$AtPlatformStateCopyWithImpl<$Res>
           ? _value.atValue
           : atValue // ignore: cast_nullable_to_non_nullable
               as Value?,
+      prefs: prefs == freezed
+          ? _value.prefs
+          : prefs // ignore: cast_nullable_to_non_nullable
+              as Option<AtClientPreference>?,
       secondaryServerAdress: secondaryServerAdress == freezed
           ? _value.secondaryServerAdress
           : secondaryServerAdress // ignore: cast_nullable_to_non_nullable
@@ -762,6 +769,7 @@ abstract class _$$_AtPlatformStateCopyWith<$Res>
       AtPlatformFailure? error,
       List<AtKey>? data,
       Value? atValue,
+      Option<AtClientPreference>? prefs,
       String secondaryServerAdress,
       bool refreshValues});
 
@@ -787,6 +795,7 @@ class __$$_AtPlatformStateCopyWithImpl<$Res>
     Object? error = freezed,
     Object? data = freezed,
     Object? atValue = freezed,
+    Object? prefs = freezed,
     Object? secondaryServerAdress = freezed,
     Object? refreshValues = freezed,
   }) {
@@ -811,6 +820,10 @@ class __$$_AtPlatformStateCopyWithImpl<$Res>
           ? _value.atValue
           : atValue // ignore: cast_nullable_to_non_nullable
               as Value?,
+      prefs: prefs == freezed
+          ? _value.prefs
+          : prefs // ignore: cast_nullable_to_non_nullable
+              as Option<AtClientPreference>?,
       secondaryServerAdress: secondaryServerAdress == freezed
           ? _value.secondaryServerAdress
           : secondaryServerAdress // ignore: cast_nullable_to_non_nullable
@@ -832,6 +845,7 @@ class _$_AtPlatformState implements _AtPlatformState {
       this.error,
       final List<AtKey>? data,
       this.atValue,
+      this.prefs,
       required this.secondaryServerAdress,
       required this.refreshValues})
       : _data = data;
@@ -854,13 +868,15 @@ class _$_AtPlatformState implements _AtPlatformState {
   @override
   final Value? atValue;
   @override
+  final Option<AtClientPreference>? prefs;
+  @override
   final String secondaryServerAdress;
   @override
   final bool refreshValues;
 
   @override
   String toString() {
-    return 'AtPlatformState(showErrorMessages: $showErrorMessages, liveData: $liveData, error: $error, data: $data, atValue: $atValue, secondaryServerAdress: $secondaryServerAdress, refreshValues: $refreshValues)';
+    return 'AtPlatformState(showErrorMessages: $showErrorMessages, liveData: $liveData, error: $error, data: $data, atValue: $atValue, prefs: $prefs, secondaryServerAdress: $secondaryServerAdress, refreshValues: $refreshValues)';
   }
 
   @override
@@ -874,6 +890,7 @@ class _$_AtPlatformState implements _AtPlatformState {
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other._data, _data) &&
             const DeepCollectionEquality().equals(other.atValue, atValue) &&
+            const DeepCollectionEquality().equals(other.prefs, prefs) &&
             const DeepCollectionEquality()
                 .equals(other.secondaryServerAdress, secondaryServerAdress) &&
             const DeepCollectionEquality()
@@ -888,6 +905,7 @@ class _$_AtPlatformState implements _AtPlatformState {
       const DeepCollectionEquality().hash(error),
       const DeepCollectionEquality().hash(_data),
       const DeepCollectionEquality().hash(atValue),
+      const DeepCollectionEquality().hash(prefs),
       const DeepCollectionEquality().hash(secondaryServerAdress),
       const DeepCollectionEquality().hash(refreshValues));
 
@@ -904,6 +922,7 @@ abstract class _AtPlatformState implements AtPlatformState {
       final AtPlatformFailure? error,
       final List<AtKey>? data,
       final Value? atValue,
+      final Option<AtClientPreference>? prefs,
       required final String secondaryServerAdress,
       required final bool refreshValues}) = _$_AtPlatformState;
 
@@ -917,6 +936,8 @@ abstract class _AtPlatformState implements AtPlatformState {
   List<AtKey>? get data;
   @override
   Value? get atValue;
+  @override
+  Option<AtClientPreference>? get prefs;
   @override
   String get secondaryServerAdress;
   @override

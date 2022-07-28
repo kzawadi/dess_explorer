@@ -12,4 +12,5 @@ abstract class IAtPlatformFacade {
   Future<Either<AtPlatformFailure, Value>> getValue(AtKey atKey);
 
   Future<Option<String>> getSecondaryServerAdress({String? atSign});
+  Option<AtClientPreference> getPreference();
 }

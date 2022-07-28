@@ -65,4 +65,17 @@ class AtPlatformFacade implements IAtPlatformFacade {
         .findSecondary(atSign ?? b!)
         .then((value) => optionOf(value.toString()));
   }
+
+  @override
+  Option<AtClientPreference> getPreference() {
+    final c = _atClientManager.atClient.getPreferences();
+
+    var v;
+    return optionOf(c);
+
+    // c!.isAvailable().then((value) {
+    //   print(value);
+    //   print(c);
+    // });
+  }
 }

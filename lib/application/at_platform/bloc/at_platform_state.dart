@@ -8,6 +8,7 @@ class AtPlatformState with _$AtPlatformState {
     AtPlatformFailure? error,
     List<AtKey>? data,
     Value? atValue,
+    Option<AtClientPreference>? prefs,
     required String secondaryServerAdress,
     required bool refreshValues,
   }) = _AtPlatformState;
@@ -17,6 +18,7 @@ class AtPlatformState with _$AtPlatformState {
         liveData: false,
         refreshValues: false,
         secondaryServerAdress: '',
+        prefs: None(),
       );
 
   // const factory AtPlatformState.keys(

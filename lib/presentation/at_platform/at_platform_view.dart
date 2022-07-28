@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:at_sync_ui_flutter/services/at_sync_ui_services.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dess_explorer/application/at_platform/bloc/at_platform_bloc.dart';
@@ -132,12 +130,6 @@ class AtPlatformView extends HookWidget {
                           name: 'updated At',
                           value: state.data![i].metadata!.updatedAt.toString(),
                         ),
-
-                        // Text(
-                        //   state.data![i].metadata!.isBinary.toString(),
-                        // ),
-                        // Text(state.data![i].metadata!.createdAt.toString()),
-                        // Text(state.data![i].metadata!.expiresAt.toString())
                       ],
                     );
                   },
@@ -164,13 +156,13 @@ class MetadataRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: Text(
             name,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: Text(value),
         ),
       ],

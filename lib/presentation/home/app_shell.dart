@@ -2,30 +2,31 @@ import 'dart:io';
 
 import 'package:animations/animations.dart';
 import 'package:dess_explorer/presentation/at_platform/at_platform_page.dart';
+import 'package:dess_explorer/presentation/at_platform/widgets/preference_viewer.dart';
 import 'package:dess_explorer/presentation/components/constants.dart';
 import 'package:dess_explorer/presentation/components/theme.dart';
 import 'package:dess_explorer/presentation/components/top_app_bar.dart';
 import 'package:dess_explorer/presentation/home/home_page.dart';
 import 'package:dess_explorer/presentation/utils/indexed_transition_switcher.dart';
 import 'package:dess_explorer/presentation/utils/layout_size.dart';
+import 'package:dess_explorer/presentation/utils/navigator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 final _scaffoldKey = GlobalKey<ScaffoldState>();
 
 const pages = <Widget>[
   AtPlatfromPage(),
-
+  PreferencesScreenScene(),
   HomePage(),
-  AtPlatfromPage(),
   // ProjectsScreen(),
   // ReleasesScreen(),
 ];
 
 /// Main widget of the app
-class AppShell extends HookWidget {
+class AppShell extends HookConsumerWidget {
   /// Constructor
   const AppShell({
     Key? key,
@@ -48,13 +49,46 @@ class AppShell extends HookWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     LayoutSize.init(context);
 
     final focusNode = useFocusNode();
 
+    final navigation = ref.watch(navigationProvider.notifier);
+    final currentRoute = ref.watch(navigationProvider);
+
     // Index of item selected
     final selectedIndex = useState(0);
+
+    // Side effect when route changes
+    useEffect(
+      () {
+        // Do not set index if its search
+        if (currentRoute != NavigationRoutes.searchScreen) {
+          selectedIndex.value = currentRoute.index as int;
+        }
+        return;
+      },
+      [currentRoute],
+    );
+
+    // Side effect when info is selected
+    useEffect(
+      () {
+        if (_scaffoldKey.currentState == null) return;
+        final isOpen = _scaffoldKey.currentState?.isEndDrawerOpen;
+        // final hasInfo = selectedInfo?.release != null;
+
+        // Open drawer if not large layout and its not open
+        // if (hasInfo && isOpen != true) {
+        //   SchedulerBinding.instance.addPostFrameCallback((_) {
+        //     _scaffoldKey.currentState?.openEndDrawer();
+        //   });
+        // }
+        return;
+      },
+      [],
+    );
 
     return Scaffold(
       appBar: const DessAppBar(),
@@ -71,7 +105,7 @@ class AppShell extends HookWidget {
             minExtendedWidth: kNavigationWidthExtended,
             extended: !LayoutSize.isSmall,
             onDestinationSelected: (index) {
-              // navigation.goTo(NavigationRoutes.values[index]);
+              navigation.goTo(NavigationRoutes.values[index]);
             },
             destinations: [
               renderNavButton(

@@ -59,7 +59,10 @@ class AtPlatformView extends HookWidget {
                             AutoRouter.of(context)
                                 .navigate(const JsonViewerWidgetRoute());
                           },
-                          child: null,
+                          child: Icon(
+                            Icons.data_array,
+                            // color: Theme.of(context).,
+                          ),
                         ),
                         MetadataRow(
                           name: 'available At',

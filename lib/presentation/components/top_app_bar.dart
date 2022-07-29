@@ -54,7 +54,7 @@ class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Caption('0.0.1'),
+            Caption('pre_version 0.0.1 '),
           ],
         ),
         const SizedBox(width: 10),

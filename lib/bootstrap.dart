@@ -49,7 +49,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
       if (!(Platform.isMacOS || Platform.isLinux)) {
         await Window.initialize();
         await Window.setEffect(
-          effect: WindowEffect.transparent,
+          effect: WindowEffect.acrylic,
         );
       }
 
@@ -80,7 +80,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
         blocObserver: AppBlocObserver(),
       );
 
-      const initialSize = Size(800, 500);
+      const initialSize = Size(850, 500);
       await windowManager.setMinimumSize(initialSize);
       await windowManager.setSize(initialSize);
       if (!Platform.isMacOS) await windowManager.setAsFrameless();

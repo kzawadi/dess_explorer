@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dess_explorer/presentation/components/theme.dart';
 import 'package:dess_explorer/presentation/home/widgets/screen.dart';
+import 'package:dess_explorer/presentation/settings/widgets/setting_general_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -34,7 +35,7 @@ class SettingPage extends StatelessWidget {
   final NavSection section;
   @override
   Widget build(BuildContext context) {
-    final List<String> _sections = ['general', 'FVM', 'Flutter'];
+    final List<String> _sections = ['general', 'AtPlatform', 'Flutter'];
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -86,7 +87,7 @@ class SettingPage extends StatelessWidget {
               scrollDirection: Axis.vertical,
               // controller: controller,
               children: const [
-                // SettingsSectionGeneral(settings, handleSave),
+                SettingsSectionFlutter(),
                 // FvmSettingsScene(settings, handleSave),
                 // SettingsSectionFlutter(settings, handleSave),
               ],

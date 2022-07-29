@@ -1,7 +1,9 @@
-import 'dart:html';
-
+import 'package:dess_explorer/application/at_platform/bloc/at_platform_bloc.dart';
+import 'package:dess_explorer/injections.dart';
 import 'package:dess_explorer/presentation/components/typography.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PreferencesScreenScene extends StatelessWidget {
   /// Constructor
@@ -16,23 +18,82 @@ class PreferencesScreenScene extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(top: 20),
-      child: ListView(
-        children: [
-          Text('FVM', style: Theme.of(context).textTheme.headline6),
-          const SizedBox(height: 20),
-          const InfoBanner(
-            title: 'At-Sign preferences',
+    return BlocBuilder<AtPlatformBloc, AtPlatformState>(
+      bloc: getIt<AtPlatformBloc>(),
+      builder: (context, state) {
+        return Container(
+          padding: const EdgeInsets.only(top: 20),
+          child: state.prefs!.fold(
+            () => const CupertinoActivityIndicator(),
+            (a) => ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text(
+                    'At-Sign preferences',
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Namespace',
+                  caption: a.namespace,
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Root Domain',
+                  caption: a.rootDomain,
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Root Port',
+                  caption: a.rootPort.toString(),
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Commit Log Path',
+                  caption: a.commitLogPath,
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'downloadPath',
+                  caption: a.downloadPath,
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Max Data Size',
+                  caption: a.maxDataSize.toString(),
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Monitor heart beat interval',
+                  caption: a.monitorHeartbeatInterval.toString(),
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Out bound connection time out',
+                  caption: a.outboundConnectionTimeout.toString(),
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Hive storage path',
+                  caption: a.hiveStoragePath,
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Private Key',
+                  caption: a.privateKey,
+                ),
+                const SizedBox(height: 20),
+                InfoBanner(
+                  title: 'Key store Secret',
+                  caption: a.keyStoreSecret.toString(),
+                ),
+              ],
+            ),
           ),
-          SwitchListTile(
-            title: const Text('hello'),
-            subtitle: const Text('HIhIHi'),
-            value: false,
-            onChanged: (value) {},
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

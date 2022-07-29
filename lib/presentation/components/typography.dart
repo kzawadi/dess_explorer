@@ -23,7 +23,7 @@ class Paragraph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return AutoSizeText(
       text,
       style: Theme.of(context).textTheme.bodyText2!.copyWith(
             height: 1.3,

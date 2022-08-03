@@ -42,7 +42,7 @@ class AtPlatformView extends HookWidget {
                   controller: _keyItemControler,
                   separatorBuilder: (_, __) => const Divider(height: 4),
                   itemBuilder: (BuildContext context, int i) {
-                    return SkGroupTile(
+                    return GroupTile(
                       title: Text(
                         state.data![i].key ?? '',
                       ),
@@ -59,7 +59,7 @@ class AtPlatformView extends HookWidget {
                             AutoRouter.of(context)
                                 .navigate(const JsonViewerWidgetRoute());
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.data_array,
                             // color: Theme.of(context).,
                           ),

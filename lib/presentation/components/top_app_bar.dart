@@ -8,6 +8,8 @@ import 'package:dess_explorer/presentation/components/windows_boader.dart';
 import 'package:dess_explorer/presentation/routes/router.gr.dart';
 import 'package:dess_explorer/presentation/settings/setting_page.dart';
 import 'package:flutter/material.dart';
+import 'package:dess_explorer/presentation/routes/router.gr.dart' as app_router;
+import 'package:auto_route/auto_route.dart';
 
 /// Dess Explorer top app bar
 class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -44,6 +46,7 @@ class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: platformBackgroundColor(context),
       title: renderTitle(),
+      // ignore: avoid_bool_literals_in_conditional_expressions
       centerTitle: Platform.isWindows ? false : true,
       titleSpacing: 0,
       leading: Platform.isMacOS ? const WindowButtons() : null,
@@ -54,21 +57,16 @@ class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Caption('pre_version 0.0.1 '),
+            Caption('alpha_0.0.1 '),
           ],
         ),
         const SizedBox(width: 10),
-        // IconButton(
-        //   icon: const Icon(Icons.search),
-        //   iconSize: 20,
-        //   splashRadius: 15,
-        //   onPressed: openSearchModal,
-        // ),
         IconButton(
-            icon: const Icon(Icons.settings),
-            iconSize: 20,
-            splashRadius: 15,
-            onPressed: openSettingsScreen),
+          icon: const Icon(Icons.settings),
+          iconSize: 20,
+          splashRadius: 15,
+          onPressed: openSettingsScreen,
+        ),
         const SizedBox(width: 10),
         if (!Platform.isMacOS) const WindowButtons(),
       ],
@@ -82,7 +80,7 @@ class DessAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
       automaticallyImplyLeading: false,
-      // shadowColor: Colors.transparent,
+      shadowColor: Colors.transparent,
       // backgroundColor: Colors.transparent,
       flexibleSpace: MoveWindow(),
     );

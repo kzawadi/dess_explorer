@@ -5,14 +5,14 @@ import 'package:flutter/widgets.dart';
 /// animations whilst maintaining their state.
 class IndexedTransitionSwitcher extends StatefulWidget {
   /// Creates an [IndexedTransitionSwitcher].
-  const IndexedTransitionSwitcher(
-      {required this.index,
-      required this.children,
-      required this.transitionBuilder,
-      this.reverse = false,
-      this.duration = const Duration(milliseconds: 300),
-      Key? key})
-      : super(key: key);
+  const IndexedTransitionSwitcher({
+    required this.index,
+    required this.children,
+    required this.transitionBuilder,
+    this.reverse = false,
+    this.duration = const Duration(milliseconds: 300),
+    Key? key,
+  }) : super(key: key);
 
   /// The index of the child to show.
   final int index;
@@ -25,8 +25,11 @@ class IndexedTransitionSwitcher extends StatefulWidget {
   /// When the index changes, the new child will animate in with the primary
   /// animation, and the old widget will animate out with the secondary
   /// animation.
-  final Widget Function(Widget child, Animation<double> primaryAnimation,
-      Animation<double> secondaryAnimation) transitionBuilder;
+  final Widget Function(
+    Widget child,
+    Animation<double> primaryAnimation,
+    Animation<double> secondaryAnimation,
+  ) transitionBuilder;
 
   /// The duration of the transition.
   final Duration duration;
@@ -63,29 +66,31 @@ class _IndexedTransitionSwitcherState extends State<IndexedTransitionSwitcher>
     super.didUpdateWidget(oldWidget);
     // Transition if the index has changed
     if (widget.index != oldWidget.index) {
-      var newChild =
+      final newChild =
           _childEntries.where((entry) => entry.index == widget.index).first;
-      var oldChild =
+      final oldChild =
           _childEntries.where((entry) => entry.index == oldWidget.index).first;
       // Animate the children
       if (widget.reverse) {
         // Animate in the new child
         newChild.primaryController.value = 1;
         newChild.secondaryController.reverse(from: 1);
-        // Animate out the old child and unstage it when the animation is complete
+        // Animate out the old child and unstage
+        //it when the animation is complete
         oldChild.secondaryController.value = 0;
-        oldChild.primaryController
-            .reverse(from: 0)
-            .then((value) => setState(() {
-                  oldChild.onStage = false;
-                  oldChild.primaryController.reset();
-                  oldChild.secondaryController.reset();
-                }));
+        oldChild.primaryController.reverse(from: 0).then(
+              (value) => setState(() {
+                oldChild.onStage = false;
+                oldChild.primaryController.reset();
+                oldChild.secondaryController.reset();
+              }),
+            );
       } else {
         // Animate in the new child
         newChild.secondaryController.value = 0;
         newChild.primaryController.forward(from: 0);
-        // Animate out the old child and unstage it when the animation is complete
+        // Animate out the old child and unstage
+        //it when the animation is complete
         oldChild.primaryController.value = 1;
         oldChild.secondaryController.forward().then((value) => setState(() {
               oldChild.onStage = false;
@@ -94,10 +99,10 @@ class _IndexedTransitionSwitcherState extends State<IndexedTransitionSwitcher>
             }));
       }
       // Reorder the stack and set onStage to true for the new child
-      _childEntries.remove(newChild);
-      _childEntries.remove(oldChild);
       _childEntries
-          .addAll(widget.reverse ? [newChild, oldChild] : [oldChild, newChild]);
+        ..remove(newChild)
+        ..remove(oldChild)
+        ..addAll(widget.reverse ? [newChild, oldChild] : [oldChild, newChild]);
       newChild.onStage = true;
     }
   }

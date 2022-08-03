@@ -13,7 +13,7 @@ import 'package:injectable/injectable.dart';
 class AtPlatformFacade implements IAtPlatformFacade {
   AtClientManager _atClientManager = AtClientManager.getInstance();
   final SdkServices _sdkServices = SdkServices.getInstance();
-  final AtSignLogger _logger = AtSignLogger('Settings facade');
+  final AtSignLogger _logger = AtSignLogger('atPlatform facade');
 
   @override
   Future<Either<AtPlatformFailure, List<AtKey>>> getAllKeys(
@@ -69,8 +69,6 @@ class AtPlatformFacade implements IAtPlatformFacade {
   @override
   Option<AtClientPreference> getPreference() {
     final c = _atClientManager.atClient.getPreferences();
-
-    var v;
     return optionOf(c);
 
     // c!.isAvailable().then((value) {

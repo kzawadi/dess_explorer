@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class SkGroupTile extends HookWidget {
+class GroupTile extends HookWidget {
   /// Constructor
-  const SkGroupTile({
+  const GroupTile({
     required this.title,
     Key? key,
     this.leading,

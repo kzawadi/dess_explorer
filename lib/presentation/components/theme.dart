@@ -143,7 +143,7 @@ double getWindowsBuild() {
 
   final splitOsVer = osVer.split(' ');
 
-  final nums = splitOsVer.where((element) => isNumeric(element)).toList();
+  final nums = splitOsVer.where(isNumeric).toList();
   return double.parse(nums.last);
 }
 
@@ -157,9 +157,10 @@ Color platformBackgroundColor(BuildContext context) {
   if (Platform.isWindows) {
     if (getWindowsBuild() >= 22000) {
       Window.setEffect(
-          effect: WindowEffect.mica,
-          color: Theme.of(context).cardColor.withAlpha(0),
-          dark: Theme.of(context).brightness == Brightness.dark);
+        effect: WindowEffect.mica,
+        color: Theme.of(context).cardColor.withAlpha(0),
+        dark: Theme.of(context).brightness == Brightness.dark,
+      );
       return Colors.transparent;
     } else if (getWindowsBuild() >= 10240) {
       // Acrylic causes issues on W10

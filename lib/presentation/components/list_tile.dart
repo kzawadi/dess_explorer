@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Generic FVM List Tile
+/// Generic Dess List Tile
 class DessListTile extends StatelessWidget {
   /// Constructor
   const DessListTile({

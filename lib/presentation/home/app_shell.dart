@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:animations/animations.dart';
+import 'package:dess_explorer/application/bot_nav_bar/bloc/bot_nav_bar_bloc.dart';
+import 'package:dess_explorer/domain/core/enums.dart';
 import 'package:dess_explorer/presentation/at_platform/at_platform_page.dart';
 import 'package:dess_explorer/presentation/at_platform/widgets/preference_viewer.dart';
 import 'package:dess_explorer/presentation/components/constants.dart';
@@ -9,11 +11,12 @@ import 'package:dess_explorer/presentation/components/top_app_bar.dart';
 import 'package:dess_explorer/presentation/home/home_page.dart';
 import 'package:dess_explorer/presentation/utils/indexed_transition_switcher.dart';
 import 'package:dess_explorer/presentation/utils/layout_size.dart';
-import 'package:dess_explorer/presentation/utils/navigator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:dess_explorer/presentation/components/organism/shortcut_manager.dart'
+    as sm;
 
 final _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -21,12 +24,10 @@ const pages = <Widget>[
   AtPlatfromPage(),
   PreferencesScreenScene(),
   HomePage(),
-  // ProjectsScreen(),
-  // ReleasesScreen(),
 ];
 
 /// Main widget of the app
-class AppShell extends HookConsumerWidget {
+class AppShell extends HookWidget {
   /// Constructor
   const AppShell({
     Key? key,
@@ -49,145 +50,123 @@ class AppShell extends HookConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     LayoutSize.init(context);
-
     final focusNode = useFocusNode();
-
-    final navigation = ref.watch(navigationProvider.notifier);
-    final currentRoute = ref.watch(navigationProvider);
-
-    // Index of item selected
-    final selectedIndex = useState(0);
-
-    // Side effect when route changes
-    useEffect(
-      () {
-        // Do not set index if its search
-        if (currentRoute != NavigationRoutes.searchScreen) {
-          selectedIndex.value = currentRoute.index as int;
-        }
-        return;
-      },
-      [currentRoute],
-    );
-
-    // Side effect when info is selected
-    useEffect(
-      () {
-        if (_scaffoldKey.currentState == null) return;
-        final isOpen = _scaffoldKey.currentState?.isEndDrawerOpen;
-        // final hasInfo = selectedInfo?.release != null;
-
-        // Open drawer if not large layout and its not open
-        // if (hasInfo && isOpen != true) {
-        //   SchedulerBinding.instance.addPostFrameCallback((_) {
-        //     _scaffoldKey.currentState?.openEndDrawer();
-        //   });
-        // }
-        return;
-      },
-      [],
-    );
-
-    return Scaffold(
-      appBar: const DessAppBar(),
-      // bottomNavigationBar: const AppBottomBar(),
-      // endDrawer: const SelectedDetailDrawer(),
-      backgroundColor: platformBackgroundColor(context),
-      key: _scaffoldKey,
-      body: Row(
-        children: [
-          NavigationRail(
+    return BlocBuilder<BotNavBarBloc, BotNavBarState>(
+      builder: (context, state) {
+        return sm.ShortcutManager(
+          focusNode: focusNode,
+          child: Scaffold(
+            appBar: const DessAppBar(),
             backgroundColor: platformBackgroundColor(context),
-            selectedIndex: selectedIndex.value,
-            minWidth: kNavigationWidth,
-            minExtendedWidth: kNavigationWidthExtended,
-            extended: !LayoutSize.isSmall,
-            onDestinationSelected: (index) {
-              navigation.goTo(NavigationRoutes.values[index]);
-            },
-            destinations: [
-              renderNavButton(
-                context,
-                'Dashboard',
-                Icons.category,
-              ),
-              renderNavButton(
-                context,
-                'AtPlatform',
-                MdiIcons.folderMultiple,
-              ),
-              renderNavButton(
-                context,
-                'Explore',
-                Icons.explore,
-              ),
-            ],
-          ),
-          if (!Platform.isWindows)
-            const VerticalDivider(
-              thickness: 1,
-              width: 1,
-            ),
-          Expanded(
-            child: Stack(
-              fit: StackFit.expand,
+            key: _scaffoldKey,
+            body: Row(
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
-                    borderRadius: Platform.isWindows
-                        ? const BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                          )
-                        : null,
-                    border: Platform.isWindows
-                        ? Border.all(
-                            color: Theme.of(context).dividerColor,
-                          )
-                        : null,
+                navigationRailWidget(context, state),
+                if (!Platform.isWindows)
+                  const VerticalDivider(
+                    thickness: 1,
+                    width: 1,
                   ),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  child: ClipRRect(
-                    // This is the main content.
-                    borderRadius: Platform.isWindows
-                        ? const BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                          )
-                        : BorderRadius.zero,
-                    child: IndexedTransitionSwitcher(
-                      // Need to update IndexTransitionSwitcher on theme change
-                      key: Key(Theme.of(context).brightness.toString()),
-                      duration: const Duration(milliseconds: 250),
-                      reverse: selectedIndex.value < 1, //todo
-                      transitionBuilder: (
-                        child,
-                        animation,
-                        secondaryAnimation,
-                      ) {
-                        return SharedAxisTransition(
-                          fillColor:
-                              Theme.of(context).brightness == Brightness.light
-                                  ? lightTheme.scaffoldBackgroundColor
-                                  : darkTheme.scaffoldBackgroundColor,
-                          animation: animation,
-                          secondaryAnimation: secondaryAnimation,
-                          transitionType: SharedAxisTransitionType.vertical,
-                          child: child,
-                        );
-                      },
-                      index: selectedIndex.value,
-                      children: pages,
-                    ),
-                  ),
-                ),
-                // const SearchBar(),
+                contentWidget(context, state),
               ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Expanded contentWidget(BuildContext context, BotNavBarState state) {
+    return Expanded(
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: Platform.isWindows
+                  ? const BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                    )
+                  : null,
+              border: Platform.isWindows
+                  ? Border.all(
+                      color: Theme.of(context).dividerColor,
+                    )
+                  : null,
+            ),
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            child: ClipRRect(
+              // This is the main content.
+              borderRadius: Platform.isWindows
+                  ? const BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                    )
+                  : BorderRadius.zero,
+              child: IndexedTransitionSwitcher(
+                // Need to update IndexTransitionSwitcher on theme change
+                key: Key(Theme.of(context).brightness.toString()),
+                duration: const Duration(milliseconds: 250),
+                reverse: state.selectedIndex < (state.previus.index),
+                transitionBuilder: (
+                  child,
+                  animation,
+                  secondaryAnimation,
+                ) {
+                  return SharedAxisTransition(
+                    fillColor: Theme.of(context).brightness == Brightness.light
+                        ? lightTheme.scaffoldBackgroundColor
+                        : darkTheme.scaffoldBackgroundColor,
+                    animation: animation,
+                    secondaryAnimation: secondaryAnimation,
+                    transitionType: SharedAxisTransitionType.vertical,
+                    child: child,
+                  );
+                },
+                index: state.selectedIndex,
+                children: pages,
+              ),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  NavigationRail navigationRailWidget(
+    BuildContext context,
+    BotNavBarState state,
+  ) {
+    return NavigationRail(
+      backgroundColor: platformBackgroundColor(context),
+      selectedIndex: state.selectedIndex,
+      minWidth: kNavigationWidth,
+      minExtendedWidth: kNavigationWidthExtended,
+      extended: !LayoutSize.isSmall,
+      onDestinationSelected: (index) {
+        context.read<BotNavBarBloc>().add(
+              BotNavBarEvent.goTo(NavigationRoutes.values[index]),
+            );
+      },
+      destinations: [
+        renderNavButton(
+          context,
+          'Dashboard',
+          Icons.category,
+        ),
+        renderNavButton(
+          context,
+          'AtPlatform',
+          MdiIcons.folderMultiple,
+        ),
+        renderNavButton(
+          context,
+          'Explore',
+          Icons.explore,
+        ),
+      ],
     );
   }
 }

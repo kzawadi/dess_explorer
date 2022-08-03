@@ -1,5 +1,6 @@
 // import 'package:atsign_location_app/l10n/l10n.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:dess_explorer/application/bot_nav_bar/bloc/bot_nav_bar_bloc.dart';
 import 'package:dess_explorer/application/on_boarding/bloc/on_boarding_bloc.dart';
 import 'package:dess_explorer/injections.dart';
 import 'package:dess_explorer/l10n/l10n.dart';
@@ -33,6 +34,9 @@ class DessApp extends StatelessWidget {
         providers: [
           BlocProvider<OnBoardingBloc>(
             create: (context) => getIt<OnBoardingBloc>(),
+          ),
+          BlocProvider<BotNavBarBloc>(
+            create: (context) => getIt<BotNavBarBloc>(),
           ),
         ],
         child: MaterialApp.router(

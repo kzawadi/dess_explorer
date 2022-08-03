@@ -1,18 +1,15 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:dess_explorer/presentation/components/theme.dart';
-import 'package:dess_explorer/presentation/home/widgets/screen.dart';
 import 'package:dess_explorer/presentation/settings/widgets/setting_general_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-/// TODO: Unify the nav sections information
 /// Nav sections
 enum NavSection {
   /// General
   general,
 
-  /// FVM
-  fvm,
+  /// AtPlatform
+  atPlatform,
 
   /// Flutter
   flutter,
@@ -71,8 +68,6 @@ class SettingPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.subtitle1,
                       ),
                       selectedTileColor: Theme.of(context).hoverColor,
-                      // selected: currentSection.value == idx,
-                      // onTap: () => changeSection(idx),
                     );
                   },
                 ).toList(),
@@ -88,8 +83,6 @@ class SettingPage extends StatelessWidget {
               // controller: controller,
               children: const [
                 SettingsSectionFlutter(),
-                // FvmSettingsScene(settings, handleSave),
-                // SettingsSectionFlutter(settings, handleSave),
               ],
             ),
           ),
